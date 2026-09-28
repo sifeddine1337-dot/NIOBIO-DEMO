@@ -1,0 +1,80 @@
+/**
+ * Design tokens.
+ *
+ * Palette: a modern teal duotone — deep teal as the brand anchor with a warm
+ * coral accent, sitting on cool slate neutrals. Plain sRGB hex so every
+ * browser renders the values identically.
+ *
+ *   anchor #0f766e   hover #115e59   bright #14b8a6   soft #ccfbf1
+ *   chrome #042f2e   deep  #134e4a   accent #ea580c
+ */
+:root {
+  /* Brand */
+  --color-primary: #0f766e;
+  --color-primary-dark: #115e59;
+  --color-primary-light: #14b8a6;
+  --color-primary-soft: #ccfbf1;
+  --color-ink: #042f2e;
+  --color-accent-deep: #134e4a;
+  --color-accent: #ea580c;
+
+  /* Tint swatches used across the layout */
+  --color-tint-blue: #ccfbf1;
+  --color-tint-sand: #ffedd5;
+  --color-tint-green: #dcfce7;
+  --color-tint-lilac: #e0f2fe;
+
+  /* Surfaces & text */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8fafc;
+  --color-bg-muted: #f1f5f9;
+  --color-white: #ffffff;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+
+  /* Feedback */
+  --color-success: #16a34a;
+  --color-success-bg: #dcfce7;
+  --color-danger: #dc2626;
+
+  /* Typography */
+  --font-ar: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+  --font-fr: 'Open Sans', 'Segoe UI', Roboto, sans-serif;
+  --font-main: var(--font-fr);
+
+  /* Layout */
+  --max-width: 1240px;
+  --header-height: 76px;
+  --topbar-height: 42px;
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Elevation (teal-tinted shadows) */
+  --shadow-sm: 0 1px 2px rgba(4, 47, 46, 0.07);
+  --shadow: 0 4px 14px rgba(4, 47, 46, 0.09);
+  --shadow-md: 0 10px 30px rgba(4, 47, 46, 0.13);
+  --shadow-lg: 0 24px 60px rgba(4, 47, 46, 0.19);
+
+  /* Motion */
+  --transition: 180ms ease;
+  --transition-slow: 320ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  --z-header: 100;
+  --z-drawer: 200;
+}
+
+/**
+ * Arabic is the default locale, so the Cairo typeface leads. French switches
+ * back to Open Sans via the html[lang] rule below.
+ */
+[dir='rtl'] {
+  --font-main: var(--font-ar);
+}
+
+html[lang='fr'] {
+  --font-main: var(--font-fr);
+}
